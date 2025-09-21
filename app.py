@@ -1,16 +1,30 @@
 from fastapi import FastAPI
 import joblib
 import pandas as pd
-import json
+import os
 
 app = FastAPI()
+
+# ------------------------
+# Paths
+# ------------------------
+MODEL_DIR = "crop_models"
+CONFIG_DIR = "config"
 
 # ------------------------
 # Load models dynamically
 # ------------------------
 def load_model_and_features(crop):
-    model = joblib.load(f"{crop}_best_model.pkl")
-    features = joblib.load(f"{crop}_features.pkl")
+    model_path = os.path.join(MODEL_DIR, f"{crop}_best_model.pkl")
+    features_path = os.path.join(MODEL_DIR, f"{crop}_features.pkl")
+
+    if not os.path.exists(model_path):
+        raise FileNotFoundError(f"Model not found for crop: {crop}")
+    if not os.path.exists(features_path):
+        raise FileNotFoundError(f"Features file not found for crop: {crop}")
+
+    model = joblib.load(model_path)
+    features = joblib.load(features_path)
     return model, features
 
 # ------------------------
