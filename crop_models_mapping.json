@@ -1,0 +1,24 @@
+{
+  "models": {
+    "rice": {
+      "model_file": "rice_best_model.pkl",
+      "feature_file": "rice_features.pkl"
+    },
+    "maize": {
+      "model_file": "maize_best_model.pkl",
+      "feature_file": "maize_features.pkl"
+    },
+    "potato": {
+      "model_file": "potato_best_model.pkl",
+      "feature_file": "potato_features.pkl"
+    },
+    "sugarcane": {
+      "model_file": "sugarcane_best_model.pkl",
+      "feature_file": "sugarcane_features.pkl"
+    },
+    "wheat": {
+      "model_file": "wheat_best_model.pkl",
+      "feature_file": "wheat_features.pkl"
+    }
+  }
+}

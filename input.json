@@ -1,0 +1,18 @@
+{
+  "year": 2020,
+  "season": "Kharif",
+  "state": "Assam",
+  "N": 60,
+  "P": 18,
+  "K": 45,
+  "pH": 2.8,
+  "area": 500,
+  "production": 100,
+  "fertilizer": 2000,
+  "pesticide": 300,
+  "city": "Guwahati",
+  "soil_moisture": 18,
+  "rainfall_percent": 25,
+  "api_key": "YOUR_OPENWEATHER_API_KEY"
+}
+
